@@ -508,7 +508,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
                             <div class="user-avatar me-2">AD</div>
-                            Admin User
+                            {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Profile</a></li>
@@ -1279,8 +1279,8 @@
                                 <tr>
                                     <td><strong>CUST-006</strong></td>
                                     <td>Sofia Cruz</td>
-                                    <td>{{ $sofiaCruzEmail }}</td>
-                                    <td>{{ $sofiaCruzPhone }}</td>
+                                    <td>{{ $sofiaCruzEmail ?? 'sofia.cruz@example.com' }}</td>
+                                    <td>{{ $sofiaCruzPhone ?? '+1 (555) 678-9012' }}</td>
                                     <td>San Francisco, CA</td>
                                     <td>19</td>
                                     <td><span class="badge-status badge-pending">Inactive</span></td>
